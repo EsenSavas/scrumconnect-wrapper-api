@@ -36,7 +36,7 @@ Call [http://localhost:3004/docs]http://localhost:3004/docs/ to view endpoints
 /ready  to check whether app is running or not<br />
 /docs to view swagger file<br />
 
-![image](https://user-images.githubusercontent.com/33178686/73980544-56ae3b80-4928-11ea-85af-99d0b2032593.png)
-![WhatsApp Image 2020-02-06 at 21 30 11 (3)](https://user-images.githubusercontent.com/33178686/73980572-6f1e5600-4928-11ea-8f89-51e03f4c01ae.jpeg)
-![WhatsApp Image 2020-02-06 at 21 30 11 (1)](https://user-images.githubusercontent.com/33178686/73980578-70e81980-4928-11ea-8591-67e0446503b5.jpeg)
+<img width="1548" alt="Screen Shot 2020-02-06 at 22 42 29" src="https://user-images.githubusercontent.com/33178686/73985013-076d0880-4932-11ea-86f8-c7d05cb2eb66.png">
+
+
 
