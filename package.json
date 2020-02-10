@@ -19,11 +19,15 @@
       "git add"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && yarn test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "author": "Esen Gungor",
   "license": "ISC",
   "dependencies": {
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
     "axios": "^0.19.2",
     "body-parser": "^1.19.0",
     "config": "^3.2.5",
@@ -44,6 +48,8 @@
     "@babel/node": "^7.8.4",
     "@babel/polyfill": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.13.0",
     "eslint-config-airbnb-base": "^13.1.0",
