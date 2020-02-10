@@ -23,6 +23,18 @@ Call [http://localhost:3004/ready](http://localhost:3004/ready) to check whether
 
 Launches the test runner in the interactive watch mode.<br />
 
+### `yarn build`
+
+It creates dist file which will be used to bundle code.
+
+### `yarn bundle`
+
+It creates bundle folder for production.
+
+### `yarn start:production`
+
+If you want to start application for production you need to use this command
+
 
 ### Swagger File
 
