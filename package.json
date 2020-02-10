@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "Customer Router API",
   "main": "src/index.js",
+  "bundleMoveInclude": "package.json dist node_modules",
   "scripts": {
     "test": "jest",
     "lint": "eslint . --ext .js --ignore-path .gitignore",
     "lint-fix": "yarn lint --fix",
-    "start": "NODE_ENV=development nodemon --exec babel-node -- src/index.js"
+    "start": "NODE_ENV=development nodemon --exec babel-node -- src/index.js",
+    "start:production": "NODE_ENV=production node dist/index.js",
+    "build": "rm -rf dist node_modules && mkdir ./dist && yarn install --frozen-lockfile && BABEL_ENV=production ./node_modules/.bin/babel src --out-dir dist && cp -r src/swagger dist",
+    "bundle": "rm -rf bundle && mkdir bundle && mkdir bundle/$npm_package_name && cp -rp $npm_package_bundleMoveInclude bundle/$npm_package_name && cd bundle && tar -czf $npm_package_name-$npm_package_version.tar.gz $npm_package_name && rm -rf $npm_package_name"
   },
   "lint-staged": {
     "**/*.js": [
@@ -25,9 +29,7 @@
     "express": "^4.17.1",
     "express-pino-logger": "^4.0.0",
     "http": "^0.0.0",
-    "https": "^1.0.0",
     "joi": "^14.3.1",
-    "nodemon": "^2.0.2",
     "pino": "^5.16.0",
     "ramda": "^0.27.0",
     "serialize-error": "^5.0.0",
@@ -52,6 +54,7 @@
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
+    "nodemon": "^2.0.2",
     "husky": "^2.3.0",
     "jest": "^24.6.0",
     "jest-sonar-reporter": "^2.0.0",
